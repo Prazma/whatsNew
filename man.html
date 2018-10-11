@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+	<head>
+		<title>tguissVT WN</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<script src='https://cdn.firebase.com/js/client/2.4.0/firebase.js'></script>
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
+			body {
+				margin: 0;
+				background: #fff;
+				font-family: 'M PLUS Rounded 1c', sans-serif;
+			}
+			.img {
+				width: 90%;
+				max-width: 150px;
+				display: block;
+				margin-right: auto;
+				margin-left: auto;
+			}
+			.nanSpan {
+				font-size: 25px;
+			}
+			#nothing {
+				text-align: center;
+				margin-top: 20px;
+			}
+			#feed {
+				margin-top: 20px;
+			}
+			.postWrapper {
+				background: #f2f5f7;
+				border: 2px solid #eff1f4;
+				width: 90%;
+				margin-right: auto;
+				margin-left: auto;
+				border-radius: 8px;
+				padding: 10px 10px 10px 10px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				max-width: 500px;
+			}
+			.titleSpan {
+				font-weight: bold;
+				font-size: 20px;
+			}
+			.commonNine {
+				width: 90%;
+				margin-right: auto;
+				margin-left: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="javascript:dataSend()">
+			<input onkeyup="keyUp()" id="ti" placeholder="タイトルを入力">
+			<input onkeyup="keyUp()" id="ci" placeholder="コンテンツを入力">
+			<input type="submit">
+		</form>
+		<p>プレビュー</p>
+		<div class='postWrapper'><div class='commonNine'><span class='titleSpan' id="tsp"></span><br><span id="csp"></span></div></div>
+		<script>
+			function keyUp() {
+				console.log("called");
+				document.getElementById("tsp").innerHTML = document.getElementById("ti").value;
+				document.getElementById("csp").innerHTML = document.getElementById("ci").value;
+			}
+		</script>
+		<script>
+			var datavase = new Firebase("https://loghorizon-8068c.firebaseio.com/");
+			function dataSend() {
+				datavase.push({mode:"real",title:document.getElementById("ti").value,content:document.getElementById("ci").value});
+			}
+		</script>
+	</body>
+</html>

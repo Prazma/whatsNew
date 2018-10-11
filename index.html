@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>What's new?</title>
+		<meta name="viewport" content="width=device-width,user-scalable=no">
+		<script src='https://cdn.firebase.com/js/client/2.4.0/firebase.js'></script>
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
+			body {
+				margin: 0;
+				background: #fff;
+				font-family: 'M PLUS Rounded 1c', sans-serif;
+			}
+			.img {
+				width: 90%;
+				max-width: 150px;
+				display: block;
+				margin-right: auto;
+				margin-left: auto;
+			}
+			.nanSpan {
+				font-size: 25px;
+			}
+			#nothing {
+				text-align: center;
+				margin-top: 20px;
+			}
+			#feed {
+				margin-top: 20px;
+			}
+			.postWrapper {
+				background: #f2f5f7;
+				border: 2px solid #eff1f4;
+				width: 90%;
+				margin-right: auto;
+				margin-left: auto;
+				border-radius: 8px;
+				padding: 10px 10px 10px 10px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				max-width: 500px;
+			}
+			.titleSpan {
+				font-weight: bold;
+				font-size: 20px;
+			}
+			.commonNine {
+				width: 90%;
+				margin-right: auto;
+				margin-left: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div id="nothing">
+				<img class="img" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPHBhdGggc3R5bGU9ImZpbGw6IzMzNEY1NTsiIGQ9Ik00NjcuODYyLDQwNC4wODhWMjU4LjQzM2MwLTMwLjk0LTguNjgzLTYwLjctMjUuMDAyLTg2LjY3bDEzLjY5Ni0xMy42OTYgIGM3LjUtNy40OTYsMTEuNjIxLTE3LjQ3NCwxMS42MTYtMjguMDk1Yy0wLjAwOS0xMC42MDgtNC4xNDItMjAuNTc4LTExLjYzNC0yOC4wNjVjLTcuNS03LjUwNC0xNy40Ny0xMS42NDItMjguMDY5LTExLjY1MSAgYy0wLjAwOSwwLTAuMDE3LDAtMC4wMjYsMGMtMTAuNTk5LDAtMjAuNTY1LDQuMTM0LTI4LjA2NSwxMS42MzRsLTE0Ljc5NSwxNC43OTVjLTI0LjU5OC0xNC4wOC01Mi41NzItMjEuNTYyLTgxLjA4LTIxLjU2MmgtOTcuMDA5ICBjLTMwLjY1NiwwLTU5LjI2MSw4LjY0LTgzLjgsMjMuMzg2bC0xNi42MTgtMTYuNjE5Yy03LjUtNy41MDQtMTcuNDY1LTExLjYzMy0yOC4wNjUtMTEuNjMzYy0wLjAwOSwwLTAuMDE3LDAtMC4wMjYsMCAgYy0xMC41OTksMC4wMDktMjAuNTY5LDQuMTQ3LTI4LjA2OSwxMS42NTFjLTcuNDkxLDcuNDg3LTExLjYyNSwxNy40NTctMTEuNjM0LDI4LjA2NWMtMC4wMDQsMTAuNjIxLDQuMTE2LDIwLjU5OSwxMS42MTYsMjguMDk1ICBsMTYuNjE1LDE2LjYxNGMtMTQuNzQsMjQuNTI2LTIzLjM3OCw1My4xMTUtMjMuMzc4LDgzLjc1MnYxNDUuNjU1SDB2MTcuNjU1aDUyLjk2Nmg3MC42MjFoNDQuMTM4aDI2LjQ4M2gyNDcuMTcyaDE3LjY1NUg1MTIgIHYtMTcuNjU1TDQ2Ny44NjIsNDA0LjA4OEw0NjcuODYyLDQwNC4wODh6Ii8+CjxnPgoJPHBhdGggc3R5bGU9ImZpbGw6IzgzQTZFMjsiIGQ9Ik00MjguNDQ0LDEwNy45MTJoMC4wMTNjNS44ODgsMC4wMDQsMTEuNDI3LDIuMzA2LDE1LjU5OSw2LjQ3OGM0LjE2LDQuMTYsNi40NTcsOS42OTgsNi40NjEsMTUuNTk5ICAgYzAuMDA0LDUuODk3LTIuMjg1LDExLjQzNS02LjQ0NCwxNS41OTVsLTExLjY0OCwxMS42NDljLTkuMTc0LTExLjU1My0xOS44MDktMjEuOTg1LTMxLjcyMS0zMC43MDNsMTIuMTU4LTEyLjE1NyAgIEM0MTcuMDMsMTEwLjIwNSw0MjIuNTYsMTA3LjkxMiw0MjguNDQ0LDEwNy45MTJ6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojODNBNkUyOyIgZD0iTTYzLjM4NCwxNDUuNTg0Yy00LjE2LTQuMTYtNi40NDgtOS42OTgtNi40NDQtMTUuNTk1YzAuMDA0LTUuOTAxLDIuMzAyLTExLjQ0LDYuNDYxLTE1LjU5OSAgIGM0LjE3Mi00LjE3Miw5LjcxMS02LjQ3NCwxNS41OTktNi40NzhjMC4wMDQsMCwwLjAwOSwwLDAuMDEzLDBjNS44ODQsMCwxMS40MTQsMi4yOTcsMTUuNTgyLDYuNDYxbDE0LjIyLDE0LjIyICAgYy0xMS43NjYsOC45NTktMjIuMjU0LDE5LjQ0Ni0zMS4yMTMsMzEuMjA5TDYzLjM4NCwxNDUuNTg0eiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6IzgzQTZFMjsiIGQ9Ik00NDEuMzc5LDQwNC4wODhIMTk0LjIwN2gtMjYuNDgzaC00NC4xMzhINjEuNzkzVjI1OC40MzNjMC04MC4zMTUsNjUuMzYyLTE0NS42NTUsMTQ1LjcwMy0xNDUuNjU1ICAgaDk3LjAwOWMyNi4wMywwLDUxLjU3OCw2Ljk0NCw3My44NzUsMjAuMDc4YzE3LjkyNywxMC41NjUsMzMuNzA3LDI1LjE2OCw0NS42NDIsNDIuMjM3YzE3LjEyOSwyNC41MDgsMjYuMTg2LDUzLjMyNywyNi4xODYsODMuMzQgICB2MTQ1LjY1NUw0NDEuMzc5LDQwNC4wODhMNDQxLjM3OSw0MDQuMDg4eiIvPgo8L2c+CjxnPgoJPHBhdGggc3R5bGU9ImZpbGw6IzMzNEY1NTsiIGQ9Ik0zNzAuNzU5LDIyNy41MzdoLTUyLjk2NmMtNC44NzUsMC04LjgyOCwzLjk1My04LjgyOCw4LjgyOGMwLDQuODc1LDMuOTUzLDguODI4LDguODI4LDguODI4aDUyLjk2NiAgIGM0Ljg3NSwwLDguODI4LTMuOTUzLDguODI4LTguODI4QzM3OS41ODYsMjMxLjQ4OSwzNzUuNjM0LDIyNy41MzcsMzcwLjc1OSwyMjcuNTM3eiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6IzMzNEY1NTsiIGQ9Ik0zNzAuNzU5LDI1NC4wMmgtNTIuOTY2Yy00Ljg3NSwwLTguODI4LDMuOTUzLTguODI4LDguODI4czMuOTUzLDguODI4LDguODI4LDguODI4aDUyLjk2NiAgIGM0Ljg3NSwwLDguODI4LTMuOTUzLDguODI4LTguODI4UzM3NS42MzQsMjU0LjAyLDM3MC43NTksMjU0LjAyeiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6IzMzNEY1NTsiIGQ9Ik0xNDEuMjQxLDI0NS4xOTJoNTIuOTY2YzQuODc1LDAsOC44MjgtMy45NTMsOC44MjgtOC44MjhjMC00Ljg3NS0zLjk1My04LjgyOC04LjgyOC04LjgyOGgtNTIuOTY2ICAgYy00Ljg3NSwwLTguODI4LDMuOTUzLTguODI4LDguODI4QzEzMi40MTQsMjQxLjIzOSwxMzYuMzY2LDI0NS4xOTIsMTQxLjI0MSwyNDUuMTkyeiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6IzMzNEY1NTsiIGQ9Ik0yMDMuMDM0LDI2Mi44NDdjMC00Ljg3NS0zLjk1My04LjgyOC04LjgyOC04LjgyOGgtNTIuOTY2Yy00Ljg3NSwwLTguODI4LDMuOTUzLTguODI4LDguODI4ICAgczMuOTUzLDguODI4LDguODI4LDguODI4aDUyLjk2NkMxOTkuMDgyLDI3MS42NzUsMjAzLjAzNCwyNjcuNzIyLDIwMy4wMzQsMjYyLjg0N3oiLz4KCTxyZWN0IHg9IjE3Ni41NTIiIHk9IjMzMy40NzkiIHN0eWxlPSJmaWxsOiMzMzRGNTU7IiB3aWR0aD0iMTU4Ljg5NyIgaGVpZ2h0PSIxNy42NTUiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
+				<span class="nanSpan">まだ、なにもありません</span>
+			</div>
+			<div  id="feed" style="display: none;">
+			</div>
+		</div>
+		<script>
+			var datavase = new Firebase("https://loghorizon-8068c.firebaseio.com/");
+			var startListening = function() {
+				datavase.on('child_added', function(snapshot) {
+					var dt = snapshot.val();
+					if( dt.mode == "real" ) {
+						document.getElementById("nothing").style.display = "none";
+						document.getElementById("feed").style.display = "block";
+						document.getElementById("feed").innerHTML += "<div class='postWrapper'><div class='commonNine'><span class='titleSpan'>"+dt.title+"</span><br><span>"+dt.content+"</span></div></div>"
+					}
+				});
+			}
+			startListening();
+		</script>
+	</body>
+</html>
